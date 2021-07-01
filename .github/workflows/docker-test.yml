@@ -30,4 +30,4 @@ jobs:
         context: .
         push: true
         tags: |
-          tingv/qinglong:test
+          tingv/qinglong:latest
