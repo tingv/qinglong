@@ -35,6 +35,57 @@ Python 和 JavaScript 定时任务管理面板
 
 在中国[二十八宿](https://zh.wikipedia.org/wiki/%E4%BA%8C%E5%8D%81%E5%85%AB%E5%AE%BF)中，青龙是东方七宿（角、亢、氐、房、心、尾、箕）的总称。 在早期星宿信仰中，祂是最尊贵的天神。 但被道教信仰吸纳入其神系后，神格大跌，道教将其称为“孟章”，在不同的道经中有“帝君”、“圣将”、“神将”和“捕鬼将”等称呼，与白虎监兵神君一起，是道教的护卫天神。
 
+## 安装
+
+### 创建 docker-compose.yml 文件并启动容器
+
+```yml
+version: "3"
+
+services:
+  qinglong:
+    container_name: qinglong
+    image: tingv/qinglong:2.2.0
+    volumes:
+      - $PWD/config:/ql/config
+      - $PWD/log:/ql/log
+      - $PWD/db:/ql/db
+    network_mode: host
+    restart: always
+```
+
+启动容器:
+
+```shell
+docker-compose up -d
+```
+
+### 安装并启动 Telegram 机器人
+
+```shell
+docker exec -it qinglong ql bot
+```
+
+### 设置 Telegram 机器人
+
+路径: `config/bot.json`
+
+### 登录面板并设置
+
+地址: `http://IP:5700`
+帐号: `admin`
+密码: `adminadmin`
+
+### 拉取脚本仓库
+
+```shell
+docker exec -it qinglong ql repo https://github.com/JDHelloWorld/jd_scripts.git "jd_|jx_|getJDCookie" "activity|backUp|jd_delCoupon" "^jd[^_]|USER"
+```
+
+### 面板内添加定时更新脚本仓库
+
+
+
 ## 多谢
 
 * [nevinee](https://gitee.com/evine)
