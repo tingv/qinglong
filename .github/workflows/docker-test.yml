@@ -1,4 +1,4 @@
-name: Publish v2.2.0 Docker Image Test
+name: Publish Docker Image
 on:
   push:
     branches:
