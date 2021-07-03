@@ -36,6 +36,17 @@ body {
   }
 }
 
+.ant-table-cell-ellipsis {
+  text-align: left !important;
+}
+
+.ant-tooltip {
+  max-width: 500px !important;
+  .ant-tooltip-inner {
+    word-break: break-all !important;
+  }
+}
+
 .env-wrapper {
   th {
     white-space: nowrap;
@@ -77,6 +88,7 @@ input:-webkit-autofill:active {
       height: calc(100vh - var(--vh-offset, 0px) - 144px);
     }
   }
+
   .ql-container-wrapper {
     &.crontab-wrapper,
     &.log-wrapper {
@@ -96,5 +108,9 @@ input:-webkit-autofill:active {
       height: calc(100vh - 176px);
       height: calc(100vh - var(--vh-offset, 0px) - 176px);
     }
+  }
+
+  .ant-tooltip {
+    max-width: 250px !important;
   }
 }
