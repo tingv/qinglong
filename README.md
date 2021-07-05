@@ -87,6 +87,11 @@ docker exec -it qinglong ql repo https://github.com/he1pu/JDHelp.git "jd_|jx_|ge
 
 ### 面板内添加定时更新脚本仓库
 
+## 其他命令
+
+```shell
+docker exec -it qinglong bash   # 进入容器
+```
 
 
 ## 多谢
